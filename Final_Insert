@@ -1,0 +1,113 @@
+INSERT INTO ADMIN (ADMIN_NAME,ADMIN_POST) VALUES 
+('Harry Potter','BUSINESS'),
+('Severus Snape','FINANCE'),
+('Hermoine Granger','FINANCE'),
+('Ron Weasly','BUSINESS'),
+('Albus Dumbledore','FINANCE'),
+('Lord Voldemort','BUSINESS'),
+('Ginny Weasly','FINANCE'),
+('Draco Malfoy','BUSINESS'),
+('Rubeus Hagrid','FINANCE'),
+('Neville Longbottom','BUSINESS')
+
+
+INSERT INTO DEPARTMENT (ADMIN_ID,DEPARTMENT_NAME,DEPARTMENT_MANAGER) VALUES 
+(1,'Cardiologist',1),
+(2,'Gastroenterologist',2),
+(3,'Nephrologist',3),
+(4,'Pulmonologist',4),
+(5,'Ophthalmologist',5),
+(6,'Dermatologist',6),
+(7,'Psychiatrist',7),
+(8,'Neurologist',8),
+(9,'Radiologist',9),
+(10,'Orthopedics',10)
+
+INSERT INTO OFFICE (BUILDING_LOCATION,ROOM_NO,[FLOOR]) VALUES 
+('33 head street',1,1),
+('Snell Centre',2,1),
+('Curry Centre',3,1),
+('Marino Centre',4,1),
+('Wall Centre',5,1),
+('Snell Centre',1,2),
+('Prudential Centre',2,2),
+('Dodge Hall',3,2),
+('Vision Eye Centre',4,2),
+('Park Centre',5,2)
+
+
+INSERT INTO DOCTOR (Doctor_Code, DEPARTMENT_ID,OFFICE_ID,FIRST_NAME,LAST_NAME,SPECIALIST,PHONE,EMAIL) VALUES
+('Doc1',1,1,'Harish','Gunda','Cardiologist','8578691532','gunda.sa@gmail.com'),
+('Doc2',2,2,'Utkarsh','Dhande','Gastroenterologist','8578691533','dhande.ut@gmail.com'),
+('Doc3',3,3,'Aditya','Dasani','Nephrologist','8578691534','dasani.ad@gmail.com'),
+('Doc4',4,4,'Dev','Patel','Pulmonologist','8578691535','patel.de@gmail.com'),
+('Doc5',5,5,'Tejas','Narayan','Otolaryngologist','8578691536','narayan.te@gmail.com'),
+('Doc6',6,6,'Bharat','Vennupusa','Ophthalmologist','8578691537','vennupusa.bh@gmail.com'),
+('Doc7',7,7,'Tapan','Katipelli','Dermatologist','8578691538','katipelli.ta@gmail.com'),
+('Doc8',8,8,'Vipanchi','Kattula','Psychiatrist','8578691539','kattula.vi@gmail.com'),
+('Doc9',9,9,'Lohit','Kilaru','Neurologist','8578691510','kilaru.lo@gmail.com'),
+('Doc10',10,10,'Phani','Sesha','Radiologist','8578691511','sesha.ph@gmail.com')
+
+INSERT INTO PATIENT (Patient_Code,FIRST_NAME,LAST_NAME,NATIONALITY,GENDER,[ADDRESS],DOB,PHONE,EMAIL) VALUES
+('PA001','Jessi','Kams','Indian','M','33 Gay Head Street','01/01/1996','8572944957','jessi@gmail.com'),
+('PA002','Rev','Katha','Indian','M','33 Gay Head Street','02/02/1995','8572945557','rev@gmail.com'),
+('PA003','Matty','Rep','USA','M','54 Heath Street','03/03/2000','8572666957','matty@gmail.com'),
+('PA004','John','Doe','USA','M','75 Bluehill Street','04/04/1998','8572776957','john@gmail.com'),
+('PA005','Jane','Doe','USA','F','33 Nubian Street','05/05/1996','8572945557','jane@gmail.com'),
+('PA006','Rachel','Zane','Indian','F','33 Gay Head Street','06/06/1996','8572988957','rachel@gmail.com'),
+('PA007','Monica','Geller','Indian','F','33 Gay Head Street','07/07/1995','8572999957','monica@gmail.com'),
+('PA008','Phoebe','Buffay','USA','F','54 Heath Street','08/08/2000','8572900957','phoebe@gmail.com'),
+('PA009','Penny','Hemsworth','USA','F','75 Bluehill Street','08/09/1998','8572911957','penny@gmail.com'),
+('PA010','Bernadette','Doe','USA','F','33 Nubian Street','10/11/1996','8572236957','bernadette@gmail.com')
+
+INSERT INTO APPOINTMENT (PATIENT_ID,DOCTOR_ID,[TYPE],CREATED_DATE,APPOINTMENT_DATE,APPOINTMENT_TIME,APPOINTMENT_DESCRIPTION) VALUES
+ (1,1,'Cardiologist',GETDATE(),'4/10/2022','10:00 AM','Patient experiencing severe heart burn'),
+ (2,2,'Gastroenterologist',GETDATE(),'4/12/2022','12:00 AM','Patient experiencing severe stomach ache'),
+ (3,3,'Nephrologist',GETDATE(),'03/07/2022','4:00 PM','Patient experiencing pain near kidney'),
+ (4,4,'Pulmonologist',GETDATE(),'02/11/2022','6:00 PM','Patient unable to breathe'),
+ (5,5,'Otolaryngologist',GETDATE(),'01/12/2022','01:00 PM','Patient experiencing severe heart burn'),
+ (6,6,'Ophthalmologist',GETDATE(),'04/14/2022','10:00 AM','Patient experiencing itchy and dry skin'),
+ (7,7,'Dermatologist',GETDATE(),'04/15/2022','12:00 AM','Patient experiencing severe anxiety'),
+ (8,8,'Psychiatrist',GETDATE(),'03/06/2022','4:00 PM','Patient experiencing pain in nerves'),
+ (9,9,'Neurologist',GETDATE(),'02/15/2022','6:00 PM','Patient need consultation with XRay'),
+ (10,10,'Radiologist',GETDATE(),'01/19/2022','01:00 PM','Patient experiencing severe heart pain')
+
+ INSERT INTO VISIT (PATIENT_ID,DOCTOR_ID,VISIT_DATE,DIAGNOSIS,REFERENCE) VALUES
+ (1,1,'4/10/2022','This patient is suffering from cornary heart',''),
+ (2,2,'4/12/2022','This patient is suffering from Gastritis.',''),
+ (3,3,'03/07/2022','This patient has kidney stones',''),
+ (4,4,'02/11/2022','This patient is suffering from mild asthma',''),
+ (5,5,'01/12/2022','This patient''s ears, throat are all perfectly fine',''),
+ (6,6,'04/14/2022','This patient has dermatitis eczema',''),
+ (7,7,'04/15/2022','This patient''s illness is highly caused by PPD.',''),
+ (8,8,'03/06/2022','This patient has Alzheimer''s disease',''),
+ (9,9,'02/15/2022','This patient has stones in the kidney',''),
+ (10,10,'01/19/2022','This patient''s illness is caused by Arthritis','')
+
+
+INSERT INTO BILL (VISIT_ID,DOCTOR_CHARGE,MEDICINE_CHARGE,LAB_CHARGE) VALUES
+ (26,50,100,30),
+ (27,50,200,0),
+ (28,25,150,25)
+
+INSERT INTO MEDICINE (MEDICINE_NAME,MEDICINE_TYPE,MEDICINE_DESC,MEDICINE_PRICE) VALUES
+ ('Statins','Heart','To lower cholestrol',10),
+ ('Pepto Bismal','Stomach','To reduce stomach problems',20),
+ ('Renal Gen','Kidney','Dietary Supplement',30),
+ ('GUT Lung Therapy','Lungs','Aids in lung recovery',25),
+ ('Astepro','ENT','Clears ear blocks',18),
+ ('Zyrtec','Skin','Rejuvanates skin',14),
+ ('Xanax','Mental','Reduces anxiety and stress',23),
+ ('Qualia Mind','Nerves','Brain growth and recovery',23),
+ ('XRay Dol','XRay','Triple action tablets',25),
+ ('AlgaeCal Plus','Bone','Increases bone strength',10)
+
+INSERT INTO PRESCRIPTION (MEDICINE_ID,VISIT_ID,TIMEFRAME,QUANTITY,DOSAGE) VALUES
+ (1,26,'1-1-0',20,'25mg'),
+ (2,27,'0-0-1',10,'10ml'),
+ (3,28,'1-0-0',5,'30ml');
+
+INSERT INTO INSURANCE (PATIENT_ID,PUBLISH_DATE,EXPIRATION_DATE,INSURANCE_COMPANY,INSURANCE_PLAN_ID) VALUES
+ (1,'01-01-2021','01-01-2023','STAR Health','SH_001'),
+ (2,'01-01-2022','01-01-2023','Insurawin','I_001'),
+ (3,'06-01-2021','01-01-2023','TATA AI','TA_001')
