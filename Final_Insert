@@ -8,7 +8,20 @@ INSERT INTO ADMIN (ADMIN_NAME,ADMIN_POST) VALUES
 ('Ginny Weasly','FINANCE'),
 ('Draco Malfoy','BUSINESS'),
 ('Rubeus Hagrid','FINANCE'),
-('Neville Longbottom','BUSINESS')
+('Neville Longbottom','BUSINESS'),
+('Pavan Patel','BUSINESS'),
+('Nevil Patel','FINANCE'),
+('Sneh Patel','FINANCE'),
+('Zankar Shah','BUSINESS'),
+('Darshil Shah','FINANCE'),
+('Dimple Rai','BUSINESS'),
+('Palak Weasly','FINANCE'),
+('Sakshi Shah','BUSINESS'),
+('Dhaval Singh','FINANCE'),
+('Tejas Raut','BUSINESS'),
+('Aman Gandhi','BUSINESS'),
+('Raghu Singh','FINANCE'),
+('Poorva Sharma','BUSINESS')
 
 
 INSERT INTO DEPARTMENT (ADMIN_ID,DEPARTMENT_NAME,DEPARTMENT_MANAGER) VALUES 
