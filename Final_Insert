@@ -21,8 +21,22 @@ INSERT INTO ADMIN (ADMIN_NAME,ADMIN_POST) VALUES
 ('Tejas Raut','BUSINESS'),
 ('Aman Gandhi','BUSINESS'),
 ('Raghu Singh','FINANCE'),
-('Poorva Sharma','BUSINESS')
-
+('Poorva Sharma','BUSINESS'),
+('Tejas Potter','BUSINESS'),
+('Ram Gopal','FINANCE'),
+('Utkarsh Dhande','FINANCE'),
+('Dev Patel','BUSINESS'),
+('Jain Motwani','FINANCE'),
+('Dheeraj Tahiliani','BUSINESS'),
+('Sahil Tahiliani','FINANCE'),
+('Hiren Solanki','BUSINESS'),
+('Yashita Singh','FINANCE'),
+('Lata Motwani','BUSINESS'),
+('Vinisha Thakker','BUSINESS'),
+('Archan Thakker','FINANCE'),
+('Amol Dasani','FINANCE'),
+('Bhoomika Kakani','BUSINESS'),
+('Siddharth Shukla','FINANCE')
 
 INSERT INTO DEPARTMENT (ADMIN_ID,DEPARTMENT_NAME,DEPARTMENT_MANAGER) VALUES 
 (1,'Cardiologist',1),
